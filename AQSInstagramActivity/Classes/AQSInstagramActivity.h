@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AQSInstagramActivity : UIActivity
-
+@property (nonatomic, strong) UIViewController *viewController;
 @end

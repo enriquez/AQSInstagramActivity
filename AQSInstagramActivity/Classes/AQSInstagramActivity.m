@@ -57,6 +57,9 @@ NSString *const kAQSInstagramURLScheme = @"instagram://app";
     self.controller = [self documentInteractionControllerForInstagramWithFileURL:URL withCaptionText:text];
     
     UIView *currentView = [self currentView];
+    if (self.viewController) {
+        currentView = self.viewController.view;
+    }
     [self.controller presentOpenInMenuFromRect:CGRectMake(0, 0, currentView.bounds.size.width, currentView.bounds.size.width) inView:currentView animated:YES];
 }
 
